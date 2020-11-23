@@ -287,6 +287,7 @@ header {
     }
     .nav-principal ul li ul li a {
         display: block !important;
+        font-size: 2rem;
     }
 }
 
@@ -800,11 +801,27 @@ header {
     margin-bottom: 2rem;
 }
 
-.fotos-instagram iframe {
-    border: none;
-    width: 80%;
-    display: block;
-    margin: 0 auto;
+.instagram-video {
+    .fotos-instagram {
+        .container {
+            .row {
+                .col {
+                    padding: 0.5rem;
+                    a {
+                        width: 15rem;
+                        img {
+                            border: 1px solid $color-negro;
+                            transition: all .5s ease;
+                        }
+                        img:hover {
+                            filter: opacity(85%);
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .video {
@@ -813,7 +830,7 @@ header {
 
 .video iframe {
     width: 80%;
-    height: 40rem;
+    height: 35rem;
     display: block;
     margin: 0 auto;
 }
@@ -832,9 +849,6 @@ header {
     }
     .video {
         margin-top: 0;
-    }
-    .fotos-instagram iframe {
-        width: 100%;
     }
     .video iframe {
         width: 100%;
@@ -929,12 +943,18 @@ header {
 .anotarse {
     margin-top: 2rem!important;
     transition: all .5s ease;
+    width: 100%;
 }
 
 .anotarse:hover {
     cursor: pointer;
     background-color: #942c20;
     color: #dddddd;
+}
+
+footer .redes-sociales {
+    display: block;
+    margin-top: 2rem;
 }
 
 .sigamos-conectados {
@@ -950,6 +970,7 @@ header {
 .contactos-footer {
     text-align: center;
     display: inline-block;
+    margin-top: 2rem;
 }
 
 @media (min-width:768px) {
@@ -958,32 +979,21 @@ header {
     }
 }
 
-footer .redes-sociales {
-    display: block;
-    margin-top: 2rem;
-}
-
 .contacto-footer {
     display: flex;
     columns: $color-blanco;
-    margin-top: 2rem;
-}
-
-.contacto-footer i {
-    display: inline-block;
-    vertical-align: center;
-    font-size: 2.5rem;
 }
 
 .contacto-footer a {
     color: $color-blanco;
-    margin-left: 2rem;
     transition: all .3s ease;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
-.contacto-footer a p {
-    display: inline;
-    margin-left: 2rem;
+.contacto-footer i {
+    font-size: 2.5rem;
 }
 
 .contacto-footer a:hover {
